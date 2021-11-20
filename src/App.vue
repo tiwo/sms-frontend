@@ -1,7 +1,7 @@
 <script setup>
 
 import { reactive, ref, provide, unref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+
 import HelpfulHackingDisplay from './components/HelpfulHackingDisplay.vue'
 import AskForKey from './components/AskForKey.vue'
 
@@ -24,9 +24,6 @@ const change_api_key = new_key => {
 <template>
   <AskForKey @change_api_key=change_api_key />
   <HelpfulHackingDisplay />
-  <hr />
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
 
 <style>
