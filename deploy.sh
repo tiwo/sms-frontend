@@ -28,7 +28,7 @@ _must mkdir -p dist/assets
 
 current_commit=`_must git rev-parse --verify HEAD`
 current_branch=`_must git rev-parse --verify --abbrev-ref HEAD`
-current_date=`_must date -Is`
+current_date=`_must date --utc -Is`
 
 if _git_repo_is_clean ; then 
   current_git_status="clean"
