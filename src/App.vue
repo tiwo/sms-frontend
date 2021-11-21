@@ -1,6 +1,7 @@
 <script setup>
 
 import { reactive, ref, provide, unref } from 'vue'
+import TheNavBar from './components/TheNavBar.vue'
 
 /// global state: ///////////////////////////////////////////////////////////
 const api_key = ref(null)
@@ -13,7 +14,8 @@ provide('api_key_is_valid', api_key_is_valid)
 
 <template>
   <div class=App>
-  <RouterView />
+    <TheNavBar />
+    <RouterView />
   </div>
 </template>
 
