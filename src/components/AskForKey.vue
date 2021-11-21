@@ -1,5 +1,5 @@
 <script setup>
-import { ref, inject, defineEmits  } from 'vue'
+import { ref, unref, inject, defineEmits  } from 'vue'
 
 const emit = defineEmits(['change_api_key'])
 
@@ -10,8 +10,9 @@ const valueEntered = ref(null)
 const log_before = (ev) => { console.log('#before', ev) }
 
 const submit = (ev) => {
-    console.log('"submit":', ev, valueEntered)
-    emit('change_api_key', valueEntered)
+    const value = unref(valueEntered)
+    console.log('"submit":', value)
+    emit('change_api_key', value)
 }
 
 </script>
